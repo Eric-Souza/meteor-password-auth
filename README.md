@@ -2,7 +2,7 @@
 
 Authentication system created using Meteor with React.
 
-* Meteor dependencies used for auth: accounts-base and accounts-password (react-tutorial.meteor.com/simple-todos/07-adding-user-accounts.html).
+* Meteor dependencies used for auth: accounts-base, accounts-password and bcrypt (react-tutorial.meteor.com/simple-todos/07-adding-user-accounts.html).
 
 * This app has been deployed using Netlify and is available on the following link: http://ericsouzapersonalblog.pythonanywhere.com
 
