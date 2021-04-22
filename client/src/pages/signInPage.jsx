@@ -53,7 +53,7 @@ const SignInPage = () => {
   const handleLogin = async e => {
     e.preventDefault()
 
-    if (userName === '' || userPwd === '') return toast.error('Please type your user name and password')
+    if (userName === '' || userPwd === '') return toast.error('Please type all required data')
 
     setLoading(true)
 
@@ -126,13 +126,13 @@ const SignInPage = () => {
 
           <Grid container>
             <Grid item xs>
-              <Link href="/cadastro" variant="body2" style={{color: 'red'}}>
+              <Link href="/signUp" variant="body2" style={{color: 'red'}}>
                 It is my first access
               </Link>
             </Grid>
                   
             <Grid item>
-              <Link href="/redefinir-senha" variant="body2" style={{color: 'red'}}>
+              <Link href="/newPwd" variant="body2" style={{color: 'red'}}>
                 I forgot my password
               </Link>
             </Grid>

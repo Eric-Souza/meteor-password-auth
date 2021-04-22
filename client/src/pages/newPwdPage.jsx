@@ -51,7 +51,7 @@ const NewPwdPage = () => {
   const handlePwdChange = async e => {
     e.preventDefault()
 
-    if (userName === '' || userNewPwd === '' || confirmNewPwd === '') return toast.error('Please type the required data')
+    if (userName === '' || userNewPwd === '' || confirmNewPwd === '') return toast.error('Please type all required data')
 
     if (userNewPwd !== confirmNewPwd) return toast.error("The passwords don't match")
 

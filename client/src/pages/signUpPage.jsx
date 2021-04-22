@@ -55,13 +55,13 @@ const SignUpPage = () => {
   const handleSignUp = async e => {
       e.preventDefault()
 
-      if (userName === '' || userEmail === '' || userPwd === '' || confirmPwd === '') return toast.error('Please type the required data')
+      if (userName === '' || userEmail === '' || userPwd === '' || confirmPwd === '') return toast.error('Please type all required data')
 
       if (userPwd !== confirmPwd) return toast.error("The passwords don't match")
 
       setLoading(true)
 
-      await Meteor.call('createNewUser', userName, userEmail, userPwd, (err, res) => {
+      await Meteor.call('createNewUser', userName, userEmail, userPwd, function (err, res) {
         if (err) {
           console.log('Sign up error:', err)
 
@@ -192,10 +192,6 @@ const SignUpPage = () => {
           </Grid>
         </form>
       </div>
-
-      <Box mt={8}>
-        <Copyright />
-      </Box>
     </Container>
   )
 }
